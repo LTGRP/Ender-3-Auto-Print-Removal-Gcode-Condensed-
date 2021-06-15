@@ -1,5 +1,8 @@
-; Please keep in mind, this is a highly condensed version of my own personal code, you will likely have to make some adjustements based on your own printer's settings, your printing preferences, etc.
+; This is a highly condensed version of forked gcode, you will likely have to make some adjustments based on your own printer's settings, your printing preferences, etc.
 
+
+
+;Header gcode
 ; Start Gcode
 G92 E0 ; Reset Extruder
 G28 ; Home all axes
@@ -14,7 +17,7 @@ G92 E0 ; Reset Extruder
 G1 Z2.0 F3000 ; Move Z Axis up little to prevent scratching of Heat Bed
 G1 X5 Y20 Z0.3 F5000.0 ; Move over to prevent blob squish
 
-
+; Footer gcode
 ; End Gcode
 M190 R30
 G0 X117 Y210 F3000 ; Edit this command based on your print
@@ -24,6 +27,10 @@ G0 X117 Y0 Z0.3 F3000 ; Edit this command based on your print
 G0 X117 Y210 Z0.3 F3000 ; Edit this command based on your print
 G0 X117 Y0 Z0.3 F3000 ; Edit this command based on your print
 ; G90 ;Absolute positionning ; Un-comment these out on the final copy-paste set of Gcode
+
+
+
+
 
 G1 X0 Y{machine_depth} ;Present print
 ; M106 S0 ;Turn-off fan ; Un-comment these out on the final copy-paste set of Gcode
